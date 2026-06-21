@@ -1,0 +1,104 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "BetterStatus Documentation",
+  "colors": {
+    "primary": "#000000",
+    "light": "#ffffff",
+    "dark": "#000000"
+  },
+  "favicon": {
+    "light": "/images/logo-dark.png",
+    "dark": "/images/logo-light.png"
+  },
+  "navigation": {
+    "pages": [
+      "getting-started",
+      {
+        "group": "Incidents",
+        "pages": [
+          "introduction-incidents",
+          "lifecycle",
+          {
+            "group": "Alerts",
+            "pages": [
+              "alerts",
+              "email",
+              "sms",
+              "rss-atom",
+              "webhooks",
+              "slack",
+              "discord"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Status Page",
+        "pages": [
+          "introduction-status-page",
+          "custom-domain",
+          "get-started-with-css",
+          "analytics",
+          "status-widget"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "pages": [
+          "introduction-monitoring",
+          "monitoring-interval",
+          "grouping-monitors"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/logo-dark.png",
+    "dark": "/images/logo-light.png",
+    "href": "https://docs.betterstatus.dev"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "https://betterstatus.dev/support"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://betterstatus.dev/dashboard"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "claude",
+      "chatgpt",
+      "aistudio"
+    ]
+  },
+  "background": {
+    "color": {
+      "dark": "#111111"
+    }
+  },
+  "appearance": {
+    "default": "system"
+  },
+  "fonts": {
+    "family": "DM Sans"
+  },
+  "search": {
+    "prompt": "Search..."
+  },
+  "errors": {
+    "404": {
+      "redirect": true,
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist in the BetterStatus documentation."
+    }
+  }
+}

@@ -1,0 +1,85 @@
+---
+title: "Status Widget"
+---
+
+Display a badge on your website to show live updates about the status of your platform. Go to **Status Pages** → **Your page** → **Status Widget** in the dashboard or follow this tutorial.
+
+### Installing the widget
+
+Via NPM (Recommended):
+
+```shellscript lines
+npm i @betterstatus/widget
+```
+
+Via CDN:
+
+```html lines
+<script src="https://cdn.betterstatus.dev/widget.js"></script>
+```
+
+Then add the widget to your code:
+
+<CodeGroup>
+
+```jsx React lines
+import '@betterstatus/widget';
+
+<StatusWidget url="acme.betterstatus.dev" />
+```
+
+```html HTML lines
+<div 
+	id="status-widget" 
+	data-url="acme.betterstatus.dev"
+></div>
+```
+
+</CodeGroup>
+
+Replace **acme.betterstatus.dev** with your status page URL. Even if you use a custom domain, you must use the **betterstatus.dev** URL. You'll find this under **Status Pages** → **Your page**  → **Domains**.
+
+### Customizing with CSS
+
+Add a `class` to your widget:
+
+<CodeGroup>
+
+```jsx React lines
+import '@betterstatus/widget';
+
+<StatusWidget url="acme.betterstatus.dev" className="status-widget" />
+```
+
+```html HTML lines
+<div 
+	id="status-widget" 
+	data-url="acme.betterstatus.dev"
+	class="status-widget"
+></div>
+```
+
+</CodeGroup>
+
+Then create a CSS block and use any of the properties below:
+
+| Property | What it controls |
+| --- | --- |
+| `--widget-padding` | Inner spacing around the badge |
+| `--widget-border-radius` | Corner rounding (`9999px` = pill) |
+| `--widget-gap` | Space between the dot and the label |
+| `--widget-dot-size` | Diameter of the status dot |
+| `--widget-dot-color-operational` | Dot color when everything is up |
+| `--widget-dot-color-degraded` | Dot color during degraded performance |
+| `--widget-dot-color-outage` | Dot color during an outage |
+| `--widget-dot-pulse` | Animated pulse ring around the dot |
+| `--widget-background` | Badge background color |
+| `--widget-border` | Badge border |
+| `--widget-shadow` | Drop shadow |
+| `--widget-font-size` | Label text size |
+| `--widget-font-weight` | Label text weight |
+| `--widget-text-color` | Label text color |
+
+### README
+
+If you want to use the status widget in your Github repo's README, simply go to **Status Pages** → **Your page** → **Status Widget** and copy the README code. 

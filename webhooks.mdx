@@ -1,0 +1,31 @@
+---
+title: "Webhooks"
+---
+
+BetterStatus sends a POST request to a URL of your choice whenever a monitor changes status. Webhooks are available on the **Pro** and **Enterprise** plans.
+
+### Enabling for yourself
+
+Go to **Monitors** → **Your monitor** → **Alerts** and add a webhook URL. We'll send a JSON payload to that endpoint on every status change.
+
+### Enabling for your users
+
+Users can add their own webhook URL from your status page. Go to **Status Pages** → **Your page** → **Alerts** to control whether webhooks are available as a subscription option.
+
+### Unsubscribing (users)
+
+To unsubscribe, users can re-enter the same webhook URL on your status page. Submitting it a second time removes it.
+
+### Payload
+
+When a status change occurs, we send a POST request with a JSON body like this:
+
+```json lines
+{
+  "monitor": {
+    "name": "My API",
+    "type": "api_endpoint"
+  },
+  "status": "incident_started"
+}
+```

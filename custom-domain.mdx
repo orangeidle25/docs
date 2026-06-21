@@ -1,0 +1,21 @@
+---
+title: "Custom Domain"
+---
+
+You can add a custom domain to your status page on the **Pro** and **Enterprise** plans.
+
+<Info>
+  You can use a root domain like `acmestatus.com`, but your DNS provider must support CNAME flattening, because BetterStatus doesn't issue A or AAAA records. [Learn about CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening/)
+</Info>
+
+### Adding a custom domain
+
+1. Go to **Status Pages** → **Your page** → **Domains**.
+2. Click **Add custom domain**.
+3. Enter your domain. We recommend `status.yourdomain.com`.
+4. Click **Add domain**.
+5. If your DNS provider supports auto-configuration, click **Auto-Configure** and follow the prompts.
+6. Otherwise, copy the CNAME record and add it manually in your DNS provider.
+7. Click **Verify** to check the record. DNS changes can take up to 48 hours to propagate.
+
+After that, your status page will become available on your custom domain.
